@@ -32,6 +32,12 @@
 			<property name="jbossHome">${WILDFLY80_HOME}</property>
 		</configuration>
 	</container>
+
+        <container qualifier="arquillian-wildfly14-managed">
+                <configuration>
+                        <property name="jbossHome">${WILDFLY14_HOME}</property>
+                </configuration>
+        </container>
 	
 	<container qualifier="arquillian-weblogic121-remote">
         <configuration>

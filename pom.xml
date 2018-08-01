@@ -246,7 +246,33 @@
 				</dependency>
 			</dependencies>
 		</profile>
-		
+
+                <profile>
+                        <id>arquillian-wildfly14-managed</id>
+
+                        <properties>
+                        <arquillian.launch>arquillian-wildfly14-managed</arquillian.launch>
+                        <jbossWebXmlVersion>80</jbossWebXmlVersion>
+                </properties>
+
+                        <dependencies>
+                                <dependency>
+                                        <groupId>org.jboss.spec</groupId>
+                                        <artifactId>jboss-javaee-7.0</artifactId>
+                                        <version>1.1.0.Final</version>
+                                        <type>pom</type>
+                                        <scope>provided</scope>
+                                </dependency>
+
+                                <dependency>
+                                        <groupId>org.wildfly.arquillian</groupId>
+                                        <artifactId>wildfly-arquillian-container-managed</artifactId>
+                                        <version>2.1.1.Final</version>
+                                        <scope>test</scope>
+                                </dependency>
+                        </dependencies>
+                </profile>
+
 		<!-- At the moment there's only a remote container in Maven central. The managed
 			 version exists, but for some reason has not been released yet.
 		 -->
